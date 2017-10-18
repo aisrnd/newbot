@@ -16,12 +16,12 @@
  * under the License.
  */
 
-namespace LINE;
+namespace Git;
 
 use LINE\LINEBot\Event\Parser\EventRequestParser;
-use LINE\LINEBot\HTTPClient;
-use LINE\LINEBot\MessageBuilder;
-use LINE\LINEBot\MessageBuilder\TextMessageBuilder;
+use Git\LINEBot\HTTPClient;
+use Git\LINEBot\MessageBuilder;
+use Git\LINEBot\MessageBuilder\TextMessageBuilder;
 use LINE\LINEBot\Response;
 use LINE\LINEBot\SignatureValidator;
 use ReflectionClass;

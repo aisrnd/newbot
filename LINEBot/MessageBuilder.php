@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace LINE\LINEBot;
+namespace Git\LINEBot;
 
 /**
  * The interface that has a responsibility to build message.

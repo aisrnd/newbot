@@ -16,7 +16,7 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\Exception;
+namespace Git\LINEBot\Exception;
 
 /**
  * An exception class that is raised when cURL execution is failed.

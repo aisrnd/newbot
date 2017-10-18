@@ -16,12 +16,28 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\HTTPClient;
+namespace Git\LINEBot\HTTPClient;
 
-use LINE\LINEBot\Constant\Meta;
-use LINE\LINEBot\Exception\CurlExecutionException;
-use LINE\LINEBot\HTTPClient;
-use LINE\LINEBot\Response;
+use Git\LINEBot\Constant\Meta;
+use Git\LINEBot\Exception\CurlExecutionException;
+use Git\LINEBot\HTTPClient;
+use Git\LINEBot\Response;
+
+$path = $_SERVER['DOCUMENT_ROOT'];
+   //$path .= "/Git/LINEBot/HTTPClient.php";
+   
+   $apppath = $path . "/Git/LINEBot/";
+   require_once($apppath . "HTTPClient.php");
+   require_once($apppath . "Constant/Meta.php");
+   require_once($apppath . "Exception/CurlExecutionException.php");
+   require_once('Curl.php');
+/*
+require_once('./LINEBot/Constant/Meta.php');
+require_once('./LINEBot/Exception/CurlExecutionException.php');
+require_once('./LINEBot/HTTPClient.php');
+require_once('./LINEBot/Response.php');
+*/
+//require_once ('../HTTPClient.php');
 
 /**
  * Class CurlHTTPClient.

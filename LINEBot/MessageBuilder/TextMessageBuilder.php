@@ -16,10 +16,17 @@
  * under the License.
  */
 
-namespace LINE\LINEBot\MessageBuilder;
+namespace Git\LINEBot\MessageBuilder;
 
 use LINE\LINEBot\Constant\MessageType;
-use LINE\LINEBot\MessageBuilder;
+use Git\LINEBot\MessageBuilder;
+
+$path = $_SERVER['DOCUMENT_ROOT'];
+   //$path .= "/Git/LINEBot/HTTPClient.php";
+   
+   $apppath = $path . "/Git/LINEBot/";
+   require_once($apppath . "MessageBuilder.php");
+   require_once($apppath . "Constant/MessageType.php");
 
 /**
  * A builder class for text message.
