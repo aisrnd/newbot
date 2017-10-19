@@ -1,7 +1,7 @@
 <?php
 
 require_once('./LINEBot/HTTPClient/CurlHTTPClient.php');
-require_once('./LINEBot/MessageBuilder\TextMessageBuilder.php');
+require_once('./LINEBot/MessageBuilder/TextMessageBuilder.php');
 require_once('LINEBot.php');
 
 
