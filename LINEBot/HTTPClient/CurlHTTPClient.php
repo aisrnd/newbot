@@ -30,6 +30,7 @@ $path = $_SERVER['DOCUMENT_ROOT'];
    require_once($apppath . "HTTPClient.php");
    require_once($apppath . "Constant/Meta.php");
    require_once($apppath . "Exception/CurlExecutionException.php");
+   require_once($apppath . "Response.php");
    require_once('Curl.php');
 /*
 require_once('./LINEBot/Constant/Meta.php');
