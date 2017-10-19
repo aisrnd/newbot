@@ -24,7 +24,7 @@ use Git\LINEBot\MessageBuilder;
 $path = $_SERVER['DOCUMENT_ROOT'];
    //$path .= "/Git/LINEBot/HTTPClient.php";
    
-   $apppath = $path . "/Git/LINEBot/";
+   $apppath = $path . "/LINEBot/";
    require_once($apppath . "MessageBuilder.php");
    require_once($apppath . "Constant/MessageType.php");
 

@@ -26,7 +26,7 @@ use Git\LINEBot\Response;
 $path = $_SERVER['DOCUMENT_ROOT'];
    //$path .= "/Git/LINEBot/HTTPClient.php";
    
-   $apppath = $path . "/Git/LINEBot/";
+   $apppath = $path . "/LINEBot/";
    require_once($apppath . "HTTPClient.php");
    require_once($apppath . "Constant/Meta.php");
    require_once($apppath . "Exception/CurlExecutionException.php");
