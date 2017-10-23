@@ -1,6 +1,6 @@
 <?php
 
-	echo "Hello Heroku";
+	//echo "Hello Heroku";
 	
 	require_once('./line_tiny.php');
 	$channelAccessToken = '721szhlnKcqiywE45a+x50db4xAn9thVwe9YFKesQRV0dd06rwMsknLaCk+toRzbvpKyIUgBNMnWWw0OYDcoonrhR+XZH8Jk/eV5irg2qvt1bJ1L/RRHX2fAErs+f6gZ9YrkIH6KV3QYcVadV6CawwdB04t89/1O/w1cDnyilFU='; //sesuaikan 
@@ -8,4 +8,5 @@
 	$client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
 	var_dump($client->parseEvents());
+
 ?>
