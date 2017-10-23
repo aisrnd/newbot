@@ -9,6 +9,6 @@
 
 	$tempdump = var_dump($client->parseEvents());
 	
-	file_put_contents("php://stderr", "$tempdump\n");
+	file_put_contents("php://stderr", "this is dump : $tempdump\n");
 
 ?>
