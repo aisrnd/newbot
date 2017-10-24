@@ -16,8 +16,13 @@ $dest_Ids = 'U7fc79408bcc23bd23ca455670086f464';
 $httpClient = new Git\LINEBot\HTTPClient\CurlHTTPClient($channel_access_token);
 $bot = new Git\LINEBot($httpClient, ['channelSecret' => $channel_secret]);
 
+$group_id='C435bf7d3def4649b8a600398bdbcbd62' ;
+$allMember_Ids= $bit->getAllGroupMemberIds($group_id);
+
 $textMessageBuilder = new Git\LINEBot\MessageBuilder\TextMessageBuilder($message2send);
-$response = $bot->pushMessage($dest_Ids, $textMessageBuilder);
+//$response = $bot->pushMessage($dest_Ids, $textMessageBuilder);
+$response = $bot->multicast($allMember_Ids, $textMessageBuilder);
+
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
 
