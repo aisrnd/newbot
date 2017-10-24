@@ -7,9 +7,10 @@
 	$channelSecret = 'bf8c23763d219001b1966809f1d3d7b8';//sesuaikan
 	$client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
+	$debug_export = var_export($client->parseEvents(), true);
 	//$tempdump = var_dump($client->parseEvents());
 	//$tempdump = $client->parseEvents();
 	
-	file_put_contents("php://stderr", "this is dump : var_dump($client->parseEvents())\n");
+	file_put_contents("php://stderr", "this is dump : $debug_export\n");
 
 ?>
