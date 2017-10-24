@@ -17,6 +17,13 @@ $httpClient = new Git\LINEBot\HTTPClient\CurlHTTPClient($channel_access_token);
 $bot = new Git\LINEBot($httpClient, ['channelSecret' => $channel_secret]);
 
 $group_id='C435bf7d3def4649b8a600398bdbcbd62' ;
+
+/**************/
+$groupMember_Ids= $bot->getGroupMemberIds($group_id);
+
+file_put_contents("php://stderr", "this is dump : $groupMember_Ids\n")
+/**************/
+
 $allMember_Ids= $bot->getAllGroupMemberIds($group_id);
 
 $textMessageBuilder = new Git\LINEBot\MessageBuilder\TextMessageBuilder($message2send);
