@@ -24,11 +24,11 @@ $groupMember_Ids= $bot->getGroupMemberIds($group_id);
 file_put_contents("php://stderr", "this is dump : $groupMember_Ids\n")
 /**************/
 
-$allMember_Ids= $bot->getAllGroupMemberIds($group_id);
+//$allMember_Ids= $bot->getAllGroupMemberIds($group_id);
 
 $textMessageBuilder = new Git\LINEBot\MessageBuilder\TextMessageBuilder($message2send);
 //$response = $bot->pushMessage($dest_Ids, $textMessageBuilder);
-$response = $bot->multicast($allMember_Ids, $textMessageBuilder);
+$response = $bot->multicast($groupMember_Ids, $textMessageBuilder);
 
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
