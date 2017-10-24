@@ -21,7 +21,7 @@ $group_id='C435bf7d3def4649b8a600398bdbcbd62' ;
 /**************/
 $groupMember_Ids= $bot->getGroupMemberIds($group_id);
 $debug_export = var_export($groupMember_Ids, true);
-file_put_contents("php://stderr", "this is dump : $debug_export\n")
+file_put_contents("php://stderr", "this is dump : $debug_export\n");
 /**************/
 
 //$allMember_Ids= $bot->getAllGroupMemberIds($group_id);
