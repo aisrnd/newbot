@@ -16,20 +16,29 @@ $dest_Ids = 'U7fc79408bcc23bd23ca455670086f464';
 $httpClient = new Git\LINEBot\HTTPClient\CurlHTTPClient($channel_access_token);
 $bot = new Git\LINEBot($httpClient, ['channelSecret' => $channel_secret]);
 
-//$group_id='C435bf7d3def4649b8a600398bdbcbd62' ;
+$group_id='C435bf7d3def4649b8a600398bdbcbd62' ;
 
+// collecting userIds
+$file_path = 'userIdList.txt';
+$handle = fopen($file_path, 'r');
+
+$groupMember_Ids = array();
+while (($buffer = fgets($handle)) !== false) {
+	$groupMember_Ids[] = $buffer;
+}
+fclose($handle);
 
 /**************/
 //$groupMember_Ids= $bot->getGroupMemberIds($group_id);
-//$debug_export = var_export($groupMember_Ids, true);
-//file_put_contents("php://stderr", "this is dump : $debug_export\n");
+$debug_export = var_export($groupMember_Ids, true);
+file_put_contents("php://stderr", "this is dump : $debug_export\n");
 /**************/
 
 //$allMember_Ids= $bot->getAllGroupMemberIds($group_id);
 
 $textMessageBuilder = new Git\LINEBot\MessageBuilder\TextMessageBuilder($message2send);
-$response = $bot->pushMessage($dest_Ids, $textMessageBuilder);
-//$response = $bot->multicast($groupMember_Ids, $textMessageBuilder);
+//$response = $bot->pushMessage($dest_Ids, $textMessageBuilder);
+$response = $bot->multicast($groupMember_Ids, $textMessageBuilder);
 
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
